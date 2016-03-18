@@ -1,0 +1,41 @@
+PODS:
+  - ECSlidingViewController (2.0.3)
+  - Masonry (0.6.3)
+  - MJRefresh (3.1.0)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - RESideMenu (4.0.7)
+  - UIImage+BlurredFrame (0.0.4)
+
+DEPENDENCIES:
+  - ECSlidingViewController (~> 2.0.3)
+  - Masonry
+  - MJRefresh (from `https://github.com/CoderMJLee/MJRefresh.git`, tag `3.1.0`)
+  - ReactiveCocoa (~> 2.3.1)
+  - RESideMenu (~> 4.0.7)
+  - UIImage+BlurredFrame
+
+EXTERNAL SOURCES:
+  MJRefresh:
+    :git: https://github.com/CoderMJLee/MJRefresh.git
+    :tag: 3.1.0
+
+CHECKOUT OPTIONS:
+  MJRefresh:
+    :git: https://github.com/CoderMJLee/MJRefresh.git
+    :tag: 3.1.0
+
+SPEC CHECKSUMS:
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  ReactiveCocoa: 334468a83b2c5f669f7cfb9a084415ee23219b4f
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
+
+COCOAPODS: 0.39.0
