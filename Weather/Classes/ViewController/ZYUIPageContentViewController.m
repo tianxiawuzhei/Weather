@@ -12,10 +12,10 @@
 
 #import "MacroDef.h"
 
-#import "UITemperatureView.h"
-#import "UILabelWithLineView.h"
-#import "UIDetailInfoView.h"
-#import "UIPrecipitationRaindropView.h"
+#import "ZYUITemperatureView.h"
+#import "ZYUILabelWithLineView.h"
+#import "ZYUIDetailInfoView.h"
+#import "ZYUIPrecipitationRaindropView.h"
 
 @interface ZYUIPageContentViewController ()
 
@@ -51,13 +51,13 @@
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, contentView.frame.size.height) ;
 
     NSUInteger scrollPaddingSides = 10;
-    UITemperatureView* tempertureView = [[UITemperatureView alloc]initWithFrame:CGRectMake(scrollPaddingSides, 0, SCREEN_WIDTH*0.95, SCREEN_HEIGHT)];
+    ZYUITemperatureView* tempertureView = [[ZYUITemperatureView alloc]initWithFrame:CGRectMake(scrollPaddingSides, 0, SCREEN_WIDTH*0.95, SCREEN_HEIGHT)];
 //    [self.scrollView addSubview:tempertureView];
     
 //    UILabelWithLineView* labelWithLineView = [[UILabelWithLineView alloc]initWithFrame:CGRectMake(scrollPaddingSides, 150, SCREEN_WIDTH*0.95, 28)];
 //    [self.view addSubview:labelWithLineView];
     
-    UIDetailInfoView* detailInfoView = [[UIDetailInfoView alloc]initWithFrame:CGRectMake(scrollPaddingSides, 200, SCREEN_WIDTH*0.95, 500)];
+    ZYUIDetailInfoView* detailInfoView = [[ZYUIDetailInfoView alloc]initWithFrame:CGRectMake(scrollPaddingSides, 200, SCREEN_WIDTH*0.95, 500)];
     [self.scrollView addSubview:detailInfoView];
     
     
@@ -67,7 +67,7 @@
 
 - (void)testUI
 {
-    UIPrecipitationRaindropView* view = [[UIPrecipitationRaindropView alloc]init];
+    ZYUIPrecipitationRaindropView* view = [[ZYUIPrecipitationRaindropView alloc]init];
     [self.view addSubview:view];
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.view);

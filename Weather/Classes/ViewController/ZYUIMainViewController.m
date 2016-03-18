@@ -7,6 +7,7 @@
 //
 
 #import "ZYUIMainViewController.h"
+#import "ZYUIPageContentViewController.h"
 
 @interface ZYUIMainViewController ()
 
@@ -53,7 +54,7 @@
     thisControl.hidden = true;
     self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height+40);
     
-    UIPageContentViewController * startingViewController = [self viewControllerAtIndex:0];
+    ZYUIPageContentViewController * startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
@@ -91,7 +92,7 @@
 #pragma mark - UIPageViewControllerDataSource
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
-    NSUInteger index = ((UIPageContentViewController*) viewController).pageIndex;
+    NSUInteger index = ((ZYUIPageContentViewController*) viewController).pageIndex;
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
@@ -105,7 +106,7 @@
 
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
-    NSUInteger index = ((UIPageContentViewController*) viewController).pageIndex;
+    NSUInteger index = ((ZYUIPageContentViewController*) viewController).pageIndex;
     
     if (index == NSNotFound) {
         return nil;
@@ -130,14 +131,14 @@
     return self.pageIndex;
 }
 
-- (UIPageContentViewController *)viewControllerAtIndex:(NSUInteger)index
+- (ZYUIPageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     if ((self.pageCount == 0) || (index >= self.pageCount)) {
         return nil;
     }
     
     // Create a new view controller and pass suitable data.
-    UIPageContentViewController *pageContentViewController = [[UIPageContentViewController alloc]init];
+    ZYUIPageContentViewController *pageContentViewController = [[ZYUIPageContentViewController alloc]init];
     //    pageContentViewController.imageFile = self.pageImages[index];
     //    pageContentViewController.titleText = self.pageTitles[index];
     pageContentViewController.pageIndex = index;
