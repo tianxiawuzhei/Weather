@@ -69,6 +69,8 @@
      make.top.mas_equalTo(100);
      // make.bottom.mas_equalTo(150); //注：这样无法定义高度，必须用下面的make.height.mas_equalTo(100)方法
      // 也可以使用make.bottom.equalTo(self.view.mas_bottom).offset(-100);方法
+     // make.bottom.mas_equalTo(150) 上面说的这种方法，无法计算出高度，这种说法是不对的，这样可以计算高度，如果
+        数值 > 0, 则会超出父试图，数值 < 0, 则会在父试图内部。
      make.height.mas_equalTo(100);
      }];
  */
