@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZYUIDashLineView : UIView
+@interface ZYUIHorizontalDashLineView : UIView
 
 @end
