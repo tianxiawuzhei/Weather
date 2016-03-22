@@ -39,7 +39,6 @@
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) //是否是IPAD
 
 
-
 #pragma mark - 功能部分
 //use dlog to print while in debug model
 #ifdef DEBUG
@@ -66,7 +65,6 @@
 #define degreesToRadian(x) (M_PI * (x) / 180.0) //弧度转角度
 
 #define radianToDegrees(radian) (radian*180.0)/(M_PI)  //角度转弧度
-
 
 //读取本地图片的 和imageNamed一样，但是性能比后者要强很多，两个参数，前面一个是 文件名，后面一个是类型
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5ACCE03E8DBA3D48725B5C71 /* libPods-Weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C550F01C69D7D563F6E67801 /* libPods-Weather.a */; };
+		A20EE9311CA11E6E00A8F4C3 /* ZYConstantDef.m in Sources */ = {isa = PBXBuildFile; fileRef = A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */; };
+		A20EE9341CA125E600A8F4C3 /* ZYPrecipitationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */; };
 		A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */; };
 		A287D3A41C9BEE1F003534C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A287D3A31C9BEE1F003534C1 /* main.m */; };
 		A287D3A71C9BEE1F003534C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A287D3A61C9BEE1F003534C1 /* AppDelegate.m */; };
@@ -133,6 +135,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20EE92F1CA11E6E00A8F4C3 /* ZYConstantDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYConstantDef.h; sourceTree = "<group>"; };
+		A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConstantDef.m; sourceTree = "<group>"; };
+		A20EE9321CA125E600A8F4C3 /* ZYPrecipitationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPrecipitationModel.h; sourceTree = "<group>"; };
+		A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPrecipitationModel.m; sourceTree = "<group>"; };
 		A2655FF11C9FC880004FF403 /* ZYUIVerticalDashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIVerticalDashLineView.h; sourceTree = "<group>"; };
 		A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIVerticalDashLineView.m; sourceTree = "<group>"; };
 		A287D39F1C9BEE1F003534C1 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +378,8 @@
 		A287D3E61C9BF64E003534C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A20EE9321CA125E600A8F4C3 /* ZYPrecipitationModel.h */,
+				A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -449,6 +457,8 @@
 			isa = PBXGroup;
 			children = (
 				A287D4101C9BFF4A003534C1 /* MacroDef.h */,
+				A20EE92F1CA11E6E00A8F4C3 /* ZYConstantDef.h */,
+				A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -822,9 +832,11 @@
 				A287D3ED1C9BF704003534C1 /* ZYUIMainViewController.m in Sources */,
 				A287D40D1C9BFE77003534C1 /* ZYUIPrecipitationRaindropView.m in Sources */,
 				A287D3A71C9BEE1F003534C1 /* AppDelegate.m in Sources */,
+				A20EE9341CA125E600A8F4C3 /* ZYPrecipitationModel.m in Sources */,
 				A287D3A41C9BEE1F003534C1 /* main.m in Sources */,
 				A287D4071C9BFE77003534C1 /* ZYUIDetailInfoRightCellView.m in Sources */,
 				A287D4091C9BFE77003534C1 /* ZYUIForecastView.m in Sources */,
+				A20EE9311CA11E6E00A8F4C3 /* ZYConstantDef.m in Sources */,
 				A287D40A1C9BFE77003534C1 /* ZYUILabelWithLineView.m in Sources */,
 				A287D40C1C9BFE77003534C1 /* ZYUIPrecipitationInfoView.m in Sources */,
 				A287D4061C9BFE77003534C1 /* ZYUIHorizontalDashLineView.m in Sources */,
