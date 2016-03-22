@@ -15,7 +15,9 @@
 /**
  *  主界面View的宽度
  */
-#define MAIN_VIEW_WIDTH SCREEN_WIDTH*0.95
+#define MAIN_VIEW_WIDTH SCREEN_WIDTH*0.96
+
+#define MAIN_VIEW_LEFT (SCREEN_WIDTH - MAIN_VIEW_WIDTH)/2
 
 /**
  *  详情界面view的高度

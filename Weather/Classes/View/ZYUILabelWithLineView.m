@@ -16,12 +16,12 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setUI];
+        [self initializeUI];
     }
     return self;
 }
 
-- (void)setUI
+- (void)initializeUI
 {
     UILabel* titleLabel = ({
         UILabel* label = [[UILabel alloc]init];
@@ -30,8 +30,8 @@
         label.font = [UIFont systemFontOfSize:16];
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(10);
-            make.top.mas_equalTo(10);
+            make.left.mas_equalTo(0);
+            make.top.mas_equalTo(0);
         }];
         
         label;
@@ -45,10 +45,9 @@
         [self addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(1);
-            make.left.mas_equalTo(10);
-            make.right.equalTo(self.mas_right).offset(-10);
+            make.left.mas_equalTo(0);
+            make.right.equalTo(self.mas_right).offset(0);
             make.centerY.equalTo(titleLabel.mas_bottom).offset(0);
-//            make.bottom.equalTo(titleLabel.mas_bottom).offset(1);
         }];
         
         view;

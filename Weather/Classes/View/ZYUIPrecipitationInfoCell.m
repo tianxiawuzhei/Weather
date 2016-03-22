@@ -34,7 +34,7 @@
         label.text = @"早上";
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(5);
+            make.top.mas_equalTo(0);
             make.centerX.equalTo(self);
         }];
     
@@ -60,28 +60,31 @@
         label.text = @"50";
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(5);
+            make.bottom.mas_equalTo(-3);
             make.centerX.equalTo(self);
         }];
         
         label;
     });
     self.percentLabel = percentLabel;
-    
 }
 
 - (NSString*)iconImgName:(NSUInteger)percent
 {
-    CGFloat tmpPercent = percent/10.0;
-    NSInteger round = lround(tmpPercent);
-    NSInteger round10 = round * 10;
-    return [NSString stringWithFormat:@"rain_ico_%d", round10];
+    if (percent >= 1 && percent < 10) {
+        return [NSString stringWithFormat:@"rain_ico_%d", 10];
+    } else {
+        CGFloat tmpPercent = percent/10.0;
+        NSInteger round = lround(tmpPercent);
+        NSInteger round10 = round * 10;
+        return [NSString stringWithFormat:@"rain_ico_%ld", (long)round10];
+    }
 }
 
 - (void)setPrecipitation:(NSString*)time andPercent:(NSInteger)percent
 {
     self.titleLabel.text = time;
-    self.percentLabel.text = [NSString stringWithFormat:@"%d", percent];
+    self.percentLabel.text = [NSString stringWithFormat:@"%ld", (long)percent];
     self.iconImgView.image = [UIImage imageNamed:[self iconImgName:percent]];
 }
 
