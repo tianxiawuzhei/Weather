@@ -20,15 +20,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-    }
-    return self;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
         [self initializeUI];
     }
     return self;

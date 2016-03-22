@@ -20,15 +20,6 @@
     return self;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self initializeUI];
-    }
-    return self;
-}
-
 - (void)initializeUI
 {
     self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];

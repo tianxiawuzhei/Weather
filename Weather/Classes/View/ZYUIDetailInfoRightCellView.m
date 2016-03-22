@@ -9,13 +9,13 @@
 #import "ZYUIDetailInfoRightCellView.h"
 #import "Masonry.h"
 
-#import "ZYUIDashLineView.h"
+#import "ZYUIHorizontalDashLineView.h"
 
 @implementation ZYUIDetailInfoRightCellView
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         [self initialize];
     }
@@ -57,8 +57,8 @@
     self.rightLabel = rightLabel;
     self.rightLabel.text = @"100";
     
-    ZYUIDashLineView* lineView = ({
-        ZYUIDashLineView* view = [[ZYUIDashLineView alloc]init];
+    ZYUIHorizontalDashLineView* lineView = ({
+        ZYUIHorizontalDashLineView* view = [[ZYUIHorizontalDashLineView alloc]init];
         [self addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(0);

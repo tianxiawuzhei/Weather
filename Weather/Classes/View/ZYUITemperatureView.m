@@ -20,15 +20,6 @@
     return self;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self setUI];
-    }
-    return self;
-}
-
 - (void)setUI
 {
     // 温度标签

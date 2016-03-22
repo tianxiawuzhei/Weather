@@ -11,15 +11,6 @@
 #define LINE_COLOR  [UIColor colorWithWhite:1.0f alpha:0.5]
 @implementation ZYUIHorizontalDashLineView
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self setBackgroundColor:[UIColor clearColor]];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

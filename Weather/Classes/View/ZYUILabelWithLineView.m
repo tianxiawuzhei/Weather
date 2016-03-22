@@ -12,20 +12,9 @@
 
 @implementation ZYUILabelWithLineView
 
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        
-        [self setUI];
-    }
-    return self;
-}
-
-- (instancetype)init
-{
-    self = [super init];
     if (self) {
         [self setUI];
     }
@@ -38,7 +27,7 @@
         UILabel* label = [[UILabel alloc]init];
         label.text = @"风速";
         label.textColor = [UIColor whiteColor];
-        label.font = [UIFont systemFontOfSize:20];
+        label.font = [UIFont systemFontOfSize:16];
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(10);
@@ -48,7 +37,7 @@
         label;
     });
     
-    self.titleLabel = titleLabel;
+    _titleLabel = titleLabel;
     
     UIView* lineView = ({
         UIView* view = [[UIView alloc]init];
@@ -58,18 +47,23 @@
             make.height.mas_equalTo(1);
             make.left.mas_equalTo(10);
             make.right.equalTo(self.mas_right).offset(-10);
-            make.top.equalTo(titleLabel.mas_bottom).offset(0);
+            make.centerY.equalTo(titleLabel.mas_bottom).offset(0);
+//            make.bottom.equalTo(titleLabel.mas_bottom).offset(1);
         }];
         
         view;
     });
-    
-    
 }
 
 - (void)setTitleText:(NSString *)titleText
 {
     self.titleLabel.text = titleText;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
 }
 
 //改写UIView的intrinsicContentSize
