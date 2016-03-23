@@ -10,6 +10,7 @@
 		5ACCE03E8DBA3D48725B5C71 /* libPods-Weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C550F01C69D7D563F6E67801 /* libPods-Weather.a */; };
 		A20EE9311CA11E6E00A8F4C3 /* ZYConstantDef.m in Sources */ = {isa = PBXBuildFile; fileRef = A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */; };
 		A20EE9341CA125E600A8F4C3 /* ZYPrecipitationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */; };
+		A25B35921CA2923900394585 /* ZYUIBigWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */; };
 		A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */; };
 		A287D3A41C9BEE1F003534C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A287D3A31C9BEE1F003534C1 /* main.m */; };
 		A287D3A71C9BEE1F003534C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A287D3A61C9BEE1F003534C1 /* AppDelegate.m */; };
@@ -139,6 +140,8 @@
 		A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConstantDef.m; sourceTree = "<group>"; };
 		A20EE9321CA125E600A8F4C3 /* ZYPrecipitationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPrecipitationModel.h; sourceTree = "<group>"; };
 		A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPrecipitationModel.m; sourceTree = "<group>"; };
+		A25B35901CA2923900394585 /* ZYUIBigWindmillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIBigWindmillView.h; sourceTree = "<group>"; };
+		A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIBigWindmillView.m; sourceTree = "<group>"; };
 		A2655FF11C9FC880004FF403 /* ZYUIVerticalDashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIVerticalDashLineView.h; sourceTree = "<group>"; };
 		A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIVerticalDashLineView.m; sourceTree = "<group>"; };
 		A287D39F1C9BEE1F003534C1 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +410,8 @@
 				A287D4031C9BFE77003534C1 /* ZYUIPrecipitationRaindropView.m */,
 				A287D4041C9BFE77003534C1 /* ZYUITemperatureView.h */,
 				A287D4051C9BFE77003534C1 /* ZYUITemperatureView.m */,
+				A25B35901CA2923900394585 /* ZYUIBigWindmillView.h */,
+				A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -843,6 +848,7 @@
 				A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */,
 				A287D4081C9BFE77003534C1 /* ZYUIDetailInfoView.m in Sources */,
 				A287D40B1C9BFE77003534C1 /* ZYUIPrecipitationInfoCell.m in Sources */,
+				A25B35921CA2923900394585 /* ZYUIBigWindmillView.m in Sources */,
 				A287D40E1C9BFE77003534C1 /* ZYUITemperatureView.m in Sources */,
 				A287D3F31C9BF82C003534C1 /* ZYUILeftMenuViewController.m in Sources */,
 				A287D3F21C9BF82C003534C1 /* ZYUIPageContentViewController.m in Sources */,
