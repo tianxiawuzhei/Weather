@@ -11,6 +11,7 @@ pod 'ReactiveCocoa', '~> 2.3.1'
 pod 'ECSlidingViewController', '~> 2.0.3'
 pod 'RESideMenu', '~> 4.0.7'
 pod 'MJRefresh', :git => 'https://github.com/CoderMJLee/MJRefresh.git', :tag => '3.1.0'
+pod 'pop', '~> 1.0.6'
 end
 
 target 'WeatherTests' do
@@ -20,4 +21,3 @@ end
 target 'WeatherUITests' do
 
 end
-
