@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5ACCE03E8DBA3D48725B5C71 /* libPods-Weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C550F01C69D7D563F6E67801 /* libPods-Weather.a */; };
 		A20EE9311CA11E6E00A8F4C3 /* ZYConstantDef.m in Sources */ = {isa = PBXBuildFile; fileRef = A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */; };
-		A20EE9341CA125E600A8F4C3 /* ZYPrecipitationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */; };
+		A2270F261CA511A30011971B /* ZYUIWindSpeedAirView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2270F251CA511A30011971B /* ZYUIWindSpeedAirView.m */; };
 		A25B35921CA2923900394585 /* ZYUIBigWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */; };
 		A25DF6191CA50A820050A286 /* ZYUISmallWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25DF6181CA50A820050A286 /* ZYUISmallWindmillView.m */; };
 		A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */; };
@@ -139,8 +139,8 @@
 /* Begin PBXFileReference section */
 		A20EE92F1CA11E6E00A8F4C3 /* ZYConstantDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYConstantDef.h; sourceTree = "<group>"; };
 		A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYConstantDef.m; sourceTree = "<group>"; };
-		A20EE9321CA125E600A8F4C3 /* ZYPrecipitationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPrecipitationModel.h; sourceTree = "<group>"; };
-		A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPrecipitationModel.m; sourceTree = "<group>"; };
+		A2270F241CA511A30011971B /* ZYUIWindSpeedAirView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIWindSpeedAirView.h; sourceTree = "<group>"; };
+		A2270F251CA511A30011971B /* ZYUIWindSpeedAirView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIWindSpeedAirView.m; sourceTree = "<group>"; };
 		A25B35901CA2923900394585 /* ZYUIBigWindmillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIBigWindmillView.h; sourceTree = "<group>"; };
 		A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIBigWindmillView.m; sourceTree = "<group>"; };
 		A25DF6171CA50A810050A286 /* ZYUISmallWindmillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUISmallWindmillView.h; sourceTree = "<group>"; };
@@ -384,8 +384,6 @@
 		A287D3E61C9BF64E003534C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A20EE9321CA125E600A8F4C3 /* ZYPrecipitationModel.h */,
-				A20EE9331CA125E600A8F4C3 /* ZYPrecipitationModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,6 +415,8 @@
 				A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */,
 				A25DF6171CA50A810050A286 /* ZYUISmallWindmillView.h */,
 				A25DF6181CA50A820050A286 /* ZYUISmallWindmillView.m */,
+				A2270F241CA511A30011971B /* ZYUIWindSpeedAirView.h */,
+				A2270F251CA511A30011971B /* ZYUIWindSpeedAirView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,7 +842,6 @@
 				A287D3ED1C9BF704003534C1 /* ZYUIMainViewController.m in Sources */,
 				A287D40D1C9BFE77003534C1 /* ZYUIPrecipitationRaindropView.m in Sources */,
 				A287D3A71C9BEE1F003534C1 /* AppDelegate.m in Sources */,
-				A20EE9341CA125E600A8F4C3 /* ZYPrecipitationModel.m in Sources */,
 				A287D3A41C9BEE1F003534C1 /* main.m in Sources */,
 				A287D4071C9BFE77003534C1 /* ZYUIDetailInfoRightCellView.m in Sources */,
 				A287D4091C9BFE77003534C1 /* ZYUIForecastView.m in Sources */,
@@ -851,6 +850,7 @@
 				A287D40A1C9BFE77003534C1 /* ZYUILabelWithLineView.m in Sources */,
 				A287D40C1C9BFE77003534C1 /* ZYUIPrecipitationInfoView.m in Sources */,
 				A287D4061C9BFE77003534C1 /* ZYUIHorizontalDashLineView.m in Sources */,
+				A2270F261CA511A30011971B /* ZYUIWindSpeedAirView.m in Sources */,
 				A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */,
 				A287D4081C9BFE77003534C1 /* ZYUIDetailInfoView.m in Sources */,
 				A287D40B1C9BFE77003534C1 /* ZYUIPrecipitationInfoCell.m in Sources */,
