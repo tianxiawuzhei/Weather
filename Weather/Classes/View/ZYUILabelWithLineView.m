@@ -47,7 +47,7 @@
             make.height.mas_equalTo(1);
             make.left.mas_equalTo(0);
             make.right.equalTo(self.mas_right).offset(0);
-            make.centerY.equalTo(titleLabel.mas_bottom).offset(0);
+            make.centerY.equalTo(titleLabel.mas_bottom).offset(6);
         }];
         
         view;
@@ -68,7 +68,7 @@
 //改写UIView的intrinsicContentSize
 - (CGSize)intrinsicContentSize
 {
-    CGFloat height = [self.titleLabel intrinsicContentSize].height + 2 + 1;
+    CGFloat height = [self.titleLabel intrinsicContentSize].height + 6 + 1;
     return CGSizeMake(UIViewNoIntrinsicMetric, height);
 }
 
