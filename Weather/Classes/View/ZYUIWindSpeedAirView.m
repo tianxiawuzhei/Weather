@@ -10,9 +10,12 @@
 
 #import "Masonry.h"
 
+#import "ZYConstantDef.h"
 #import "ZYUILabelWithLineView.h"
 #import "ZYUIBigWindmillView.h"
 #import "ZYUISmallWindmillView.h"
+#import "ZYUIWindSpeedTextView.h"
+#import "ZYUIAirPressureTextView.h"
 
 @interface ZYUIWindSpeedAirView ()
 
@@ -36,7 +39,7 @@
 - (void)initializeUI
 {
     self.layer.cornerRadius = 3;
-    self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5f];
+    self.backgroundColor = MAIN_VIEW_COLOR;
     
     ZYUILabelWithLineView *titleLabel = ({
         ZYUILabelWithLineView* label = [[ZYUILabelWithLineView alloc]init];
@@ -74,6 +77,32 @@
         smallWindmill;
     });
     self.smallWindmillView = smallWindmill;
+    
+    self.bigWindmillView.windSpeed = 15;
+    self.smallWindmillView.windSpeed = 15;
+    
+    ZYUIWindSpeedTextView *speedTextView = ({
+        ZYUIWindSpeedTextView *view = [[ZYUIWindSpeedTextView alloc]init];
+        [self addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(112);
+            make.bottom.mas_equalTo(-77);
+        }];
+        
+        view;
+    });
 
+    ZYUIAirPressureTextView *airPreTextView = ({
+        ZYUIAirPressureTextView *view = [[ZYUIAirPressureTextView alloc]init];
+        [self addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(-16);
+            make.bottom.mas_equalTo(-3);
+        }];
+        
+        view;
+    });
+
+    
 }
 @end
