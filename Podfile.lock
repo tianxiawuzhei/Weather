@@ -1,4 +1,12 @@
 PODS:
+  - CocoaLumberjack (2.1.0):
+    - CocoaLumberjack/Default (= 2.1.0)
+    - CocoaLumberjack/Extensions (= 2.1.0)
+  - CocoaLumberjack/Core (2.1.0)
+  - CocoaLumberjack/Default (2.1.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.1.0):
+    - CocoaLumberjack/Default
   - ECSlidingViewController (2.0.3)
   - Masonry (0.6.3)
   - MJRefresh (3.1.0)
@@ -14,6 +22,7 @@ PODS:
   - UIImage+BlurredFrame (0.0.4)
 
 DEPENDENCIES:
+  - CocoaLumberjack
   - ECSlidingViewController (~> 2.0.3)
   - Masonry
   - MJRefresh (from `https://github.com/CoderMJLee/MJRefresh.git`, tag `3.1.0`)
@@ -33,6 +42,7 @@ CHECKOUT OPTIONS:
     :tag: 3.1.0
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: d6627e7ad42e14d41a4fa2e6c7ae42489d5f3e8b
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4

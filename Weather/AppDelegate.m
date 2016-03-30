@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZYLogging.h"
 #import "RESideMenu.h"
 #import "ZYUIMainViewController.h"
 #import "ZYUILeftMenuViewController.h"
@@ -19,6 +20,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [ZYLogging setUpLogging];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
