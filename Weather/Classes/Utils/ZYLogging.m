@@ -39,6 +39,9 @@ DDLogLevel ddLogLevel = DDLogLevelWarning;
 
 + (void)setUpLogging
 {
+#if DEBUG
+    setenv("XcodeColors", "YES", 0);
+#endif
     // Standard lumberjack initialization
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     
