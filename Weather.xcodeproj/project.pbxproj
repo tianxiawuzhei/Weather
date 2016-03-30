@@ -15,6 +15,8 @@
 		A25B35921CA2923900394585 /* ZYUIBigWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */; };
 		A25DF6191CA50A820050A286 /* ZYUISmallWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25DF6181CA50A820050A286 /* ZYUISmallWindmillView.m */; };
 		A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */; };
+		A271F45E1CA928D20087E581 /* ZYUISunRiseSetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A271F45D1CA928D20087E581 /* ZYUISunRiseSetLayer.m */; };
+		A271F4611CA931A40087E581 /* ZYUISunRiseSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = A271F4601CA931A40087E581 /* ZYUISunRiseSetView.m */; };
 		A287D3A41C9BEE1F003534C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A287D3A31C9BEE1F003534C1 /* main.m */; };
 		A287D3A71C9BEE1F003534C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A287D3A61C9BEE1F003534C1 /* AppDelegate.m */; };
 		A287D3AF1C9BEE1F003534C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A287D3AE1C9BEE1F003534C1 /* Assets.xcassets */; };
@@ -153,6 +155,10 @@
 		A25DF6181CA50A820050A286 /* ZYUISmallWindmillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUISmallWindmillView.m; sourceTree = "<group>"; };
 		A2655FF11C9FC880004FF403 /* ZYUIVerticalDashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIVerticalDashLineView.h; sourceTree = "<group>"; };
 		A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIVerticalDashLineView.m; sourceTree = "<group>"; };
+		A271F45C1CA928D20087E581 /* ZYUISunRiseSetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUISunRiseSetLayer.h; sourceTree = "<group>"; };
+		A271F45D1CA928D20087E581 /* ZYUISunRiseSetLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUISunRiseSetLayer.m; sourceTree = "<group>"; };
+		A271F45F1CA931A40087E581 /* ZYUISunRiseSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUISunRiseSetView.h; sourceTree = "<group>"; };
+		A271F4601CA931A40087E581 /* ZYUISunRiseSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUISunRiseSetView.m; sourceTree = "<group>"; };
 		A287D39F1C9BEE1F003534C1 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A287D3A31C9BEE1F003534C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A287D3A51C9BEE1F003534C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -427,6 +433,10 @@
 				A2270F281CA51FE70011971B /* ZYUIWindSpeedTextView.m */,
 				A24327401CA53EBC00D2C877 /* ZYUIAirPressureTextView.h */,
 				A24327411CA53EBC00D2C877 /* ZYUIAirPressureTextView.m */,
+				A271F45C1CA928D20087E581 /* ZYUISunRiseSetLayer.h */,
+				A271F45D1CA928D20087E581 /* ZYUISunRiseSetLayer.m */,
+				A271F45F1CA931A40087E581 /* ZYUISunRiseSetView.h */,
+				A271F4601CA931A40087E581 /* ZYUISunRiseSetView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -862,10 +872,12 @@
 				A287D40C1C9BFE77003534C1 /* ZYUIPrecipitationInfoView.m in Sources */,
 				A287D4061C9BFE77003534C1 /* ZYUIHorizontalDashLineView.m in Sources */,
 				A2270F261CA511A30011971B /* ZYUIWindSpeedAirView.m in Sources */,
+				A271F4611CA931A40087E581 /* ZYUISunRiseSetView.m in Sources */,
 				A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */,
 				A24327421CA53EBC00D2C877 /* ZYUIAirPressureTextView.m in Sources */,
 				A287D4081C9BFE77003534C1 /* ZYUIDetailInfoView.m in Sources */,
 				A287D40B1C9BFE77003534C1 /* ZYUIPrecipitationInfoCell.m in Sources */,
+				A271F45E1CA928D20087E581 /* ZYUISunRiseSetLayer.m in Sources */,
 				A25B35921CA2923900394585 /* ZYUIBigWindmillView.m in Sources */,
 				A287D40E1C9BFE77003534C1 /* ZYUITemperatureView.m in Sources */,
 				A287D3F31C9BF82C003534C1 /* ZYUILeftMenuViewController.m in Sources */,
