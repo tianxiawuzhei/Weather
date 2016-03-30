@@ -14,6 +14,7 @@
 		A24327421CA53EBC00D2C877 /* ZYUIAirPressureTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A24327411CA53EBC00D2C877 /* ZYUIAirPressureTextView.m */; };
 		A25B35921CA2923900394585 /* ZYUIBigWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */; };
 		A25DF6191CA50A820050A286 /* ZYUISmallWindmillView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25DF6181CA50A820050A286 /* ZYUISmallWindmillView.m */; };
+		A25E71241CABD8090043F6F0 /* ZYLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = A25E71231CABD8090043F6F0 /* ZYLogging.m */; };
 		A2655FF31C9FC880004FF403 /* ZYUIVerticalDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */; };
 		A271F45E1CA928D20087E581 /* ZYUISunRiseSetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A271F45D1CA928D20087E581 /* ZYUISunRiseSetLayer.m */; };
 		A271F4611CA931A40087E581 /* ZYUISunRiseSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = A271F4601CA931A40087E581 /* ZYUISunRiseSetView.m */; };
@@ -153,6 +154,8 @@
 		A25B35911CA2923900394585 /* ZYUIBigWindmillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIBigWindmillView.m; sourceTree = "<group>"; };
 		A25DF6171CA50A810050A286 /* ZYUISmallWindmillView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUISmallWindmillView.h; sourceTree = "<group>"; };
 		A25DF6181CA50A820050A286 /* ZYUISmallWindmillView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUISmallWindmillView.m; sourceTree = "<group>"; };
+		A25E71221CABD8090043F6F0 /* ZYLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYLogging.h; sourceTree = "<group>"; };
+		A25E71231CABD8090043F6F0 /* ZYLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYLogging.m; sourceTree = "<group>"; };
 		A2655FF11C9FC880004FF403 /* ZYUIVerticalDashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUIVerticalDashLineView.h; sourceTree = "<group>"; };
 		A2655FF21C9FC880004FF403 /* ZYUIVerticalDashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUIVerticalDashLineView.m; sourceTree = "<group>"; };
 		A271F45C1CA928D20087E581 /* ZYUISunRiseSetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUISunRiseSetLayer.h; sourceTree = "<group>"; };
@@ -486,6 +489,8 @@
 		A287D40F1C9BFF24003534C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A25E71221CABD8090043F6F0 /* ZYLogging.h */,
+				A25E71231CABD8090043F6F0 /* ZYLogging.m */,
 				A287D4101C9BFF4A003534C1 /* MacroDef.h */,
 				A20EE92F1CA11E6E00A8F4C3 /* ZYConstantDef.h */,
 				A20EE9301CA11E6E00A8F4C3 /* ZYConstantDef.m */,
@@ -862,6 +867,7 @@
 				A287D3ED1C9BF704003534C1 /* ZYUIMainViewController.m in Sources */,
 				A287D40D1C9BFE77003534C1 /* ZYUIPrecipitationRaindropView.m in Sources */,
 				A2270F291CA51FE70011971B /* ZYUIWindSpeedTextView.m in Sources */,
+				A25E71241CABD8090043F6F0 /* ZYLogging.m in Sources */,
 				A287D3A71C9BEE1F003534C1 /* AppDelegate.m in Sources */,
 				A287D3A41C9BEE1F003534C1 /* main.m in Sources */,
 				A287D4071C9BFE77003534C1 /* ZYUIDetailInfoRightCellView.m in Sources */,
