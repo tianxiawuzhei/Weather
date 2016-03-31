@@ -64,7 +64,6 @@
         view;
     });
 
-   
 }
 
 - (CGSize)intrinsicContentSize

@@ -38,4 +38,6 @@
 
 #define MAIN_VIEW_COLOR [UIColor colorWithWhite:0 alpha:0.2f]
 
+#define SUN_VIEW_HEIGHT 173
+
 
