@@ -13,6 +13,5 @@
 @property (nonatomic, assign) CGFloat riseTime;
 @property (nonatomic, assign) CGFloat setTime;
 @property (nonatomic, assign) float time;
-@property (nonatomic, assign) float ratioLine;
 
 @end

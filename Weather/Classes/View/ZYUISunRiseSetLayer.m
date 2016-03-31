@@ -8,12 +8,14 @@
 
 #import "ZYUISunRiseSetLayer.h"
 #import "ZYConstantDef.h"
+#import "ZYLogging.h"
+#import "UIColor+ZYExtend.h"
 
-#define SUN_CIRCLE_COLOR  [UIColor colorWithRed:252.0/255.0 green:223.0/255.0 blue:101.0/255.0 alpha:1.0f]
-#define SUN_LINE_DOT_COLOR [UIColor colorWithRed:252.0/255.0 green:223.0/255.0 blue:101.0/255.0 alpha:1.0f]
-
-#define SunLayerHeight 80
-#define SunLayerWidth MAIN_VIEW_WIDTH*0.85
+#define SUN_CIRCLE_COLOR [UIColor zy_colorWithRGBHex:0x60644c alpha:0.8]
+#define SUN_SMALL_CIRCLE_COLOR [UIColor zy_colorWithRGBHex:0xffce1d alpha:1]
+#define SUN_LINE_DOT_COLOR [UIColor colorWithWhite:0.8 alpha:0.7]
+#define SunLayerHeight 90
+#define SunLayerWidth MAIN_VIEW_WIDTH*0.9
 
 static const CGFloat dayMinNum = 60*24;
 
@@ -55,91 +57,82 @@ static const CGFloat dayMinNum = 60*24;
 
 - (void)display {
     CGFloat time = [self.presentationLayer time];
+//    ZYLog(@"display time %f", time);
+    
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
     CGPoint center = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
     
-    CGFloat height = self.bounds.size.height;
+    CGFloat height = self.bounds.size.height - 8;
     CGFloat width = self.bounds.size.width;
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
     //画直线
-    CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, SUN_LINE_DOT_COLOR.CGColor);
     CGContextSetLineWidth(ctx, 1);
     CGContextMoveToPoint(ctx, 0, height);
     CGContextAddLineToPoint(ctx, width, height);
     CGContextStrokePath(ctx);
     
-    CGFloat startPos = (self.riseTime/dayMinNum) * width;
-    CGFloat endPos = (self.setTime/dayMinNum) * width;
-   
+    CGFloat startPos = 34;//(self.riseTime/dayMinNum) * width;
+    CGFloat endPos = 180;//(self.setTime/dayMinNum) * width;
+    
     CGFloat radius = (endPos - startPos)*0.5;
     CGPoint centerOfCircle = CGPointMake(startPos + radius, height);
     CGMutablePathRef circlePath = CGPathCreateMutable();
     CGPathAddArc(circlePath, nil, centerOfCircle.x, centerOfCircle.y,
                                   radius, 1.0*M_PI, 2*M_PI, 0);
-
     CGContextAddPath(ctx, circlePath);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
-    CGContextSetFillColorWithColor(ctx, [UIColor grayColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, SUN_LINE_DOT_COLOR.CGColor);
+    CGFloat arr[] = {3, 1};
+    //下面最后一个参数“2”代表排列的个数。
+    CGContextSetLineDash(ctx, 0, arr, 2);
+//    CGContextSetFillColorWithColor(ctx, [UIColor grayColor].CGColor);
     CGContextSetLineWidth(ctx, 1);
-    CGContextFillPath(ctx);
+    CGContextStrokePath(ctx);
+    
+    if (time > self.riseTime) {
+        CGFloat timeRatio = (time - self.riseTime)/(self.setTime - self.riseTime);
+        CGFloat deltaAngle = timeRatio*M_PI;
+        //    CGFloat timeX =  startPos + timeRatio*radius*2;
+        CGFloat x = cos(deltaAngle);
+        CGFloat timeX = startPos + radius - (x*radius);
+        CGMutablePathRef leftPartCirclePath = CGPathCreateMutable();
+        
+        CGPathMoveToPoint(leftPartCirclePath, nil, timeX, height);
+        CGPathAddArc(leftPartCirclePath, nil, centerOfCircle.x, centerOfCircle.y,
+                     radius, 1.0*M_PI, 1.0*M_PI + deltaAngle, 0);
+        CGContextSetFillColorWithColor(ctx, SUN_CIRCLE_COLOR.CGColor);
+        CGContextSetLineWidth(ctx, 1);
+        CGContextAddPath(ctx, leftPartCirclePath);
+        CGContextFillPath(ctx);
+    }
 
-    CGFloat timeRatio = (time - self.riseTime)/(self.setTime - self.riseTime);
-    CGFloat deltaAngle = timeRatio*M_PI;
-//    CGFloat timeX =  startPos + timeRatio*radius*2;
-    CGFloat x = cos(deltaAngle);
-    CGFloat timeX = startPos + radius - (x*radius);
-    CGMutablePathRef leftPartCirclePath = CGPathCreateMutable();
-
-    CGPathMoveToPoint(leftPartCirclePath, nil, timeX, height);
-    CGPathAddArc(leftPartCirclePath, nil, centerOfCircle.x, centerOfCircle.y,
-                 radius, 1.0*M_PI, 1.0*M_PI + deltaAngle, 0);
-    CGContextSetFillColorWithColor(ctx, [UIColor blueColor].CGColor);
-    CGContextSetLineWidth(ctx, 1);
-    CGContextAddPath(ctx, leftPartCirclePath);
-//    CGContextStrokePath(ctx);
+    CGFloat smallRadius = 4;
+    CGPoint leftSmallCenter = CGPointMake(startPos, height);
+    CGAffineTransform t1 = CGAffineTransformConcat(CGAffineTransformConcat(
+       CGAffineTransformMakeTranslation(-leftSmallCenter.x, -leftSmallCenter.y),
+             CGAffineTransformMakeScale(1, 1.25)),
+            CGAffineTransformMakeTranslation(leftSmallCenter.x, leftSmallCenter.y));
+    CGMutablePathRef leftCirPath = CGPathCreateMutable();
+    CGPathAddArc(leftCirPath, &t1, leftSmallCenter.x, leftSmallCenter.y,
+                 smallRadius, 0*M_PI, 2*M_PI, 0);
+    CGContextAddPath(ctx, leftCirPath);
+    CGContextSetFillColorWithColor(ctx, SUN_SMALL_CIRCLE_COLOR.CGColor);
     CGContextFillPath(ctx);
     
-    //设置画笔线条粗细
-    CGContextSetLineWidth(ctx, 1.0);
-    //设置矩形填充颜色：红色
-    CGContextSetRGBFillColor (ctx, 1.0, 0.0, 0.0, 1.0);
-    //设置字体
-    UIFont *font = [UIFont boldSystemFontOfSize:31.0];
-    //在指定的矩形区域内画文字
-    [@"hello world" drawAtPoint:CGPointMake(0, 0) withFont:font];
-    
-    /*
-    CGContextMoveToPoint(ctx, center.x - 90, center.y);
-    CGContextAddArc(ctx, center.x, center.y - 1, 88, M_PI, M_PI + time * M_PI, NO);
-    if (0 == time) {
-        self.ratioLine = 0;
-    }
-    if (time < 1 / 2 && time != 0) {
-        self.ratioLine = 90 - cos(time * M_PI) * 90;
-    }
-    if (1 / 2 == time) {
-        self.ratioLine = 90;
-    }
-    if (time > 1 / 2 && time != 1) {
-        self.ratioLine = 90 + cos(M_PI - time * M_PI) * 90;
-    }
-    if (1 == time) {
-        self.ratioLine = 180;
-    }
-    
-    CGContextAddLineToPoint(ctx, center.x + self.ratioLine - 90, center.y);
+    CGPoint rightSmallCenter = CGPointMake(endPos, height);
+    CGAffineTransform t3 = CGAffineTransformConcat(CGAffineTransformConcat(
+                                    CGAffineTransformMakeTranslation(-rightSmallCenter.x, -rightSmallCenter.y),
+                                    CGAffineTransformMakeScale(1, 1.25)),
+                            CGAffineTransformMakeTranslation(rightSmallCenter.x, rightSmallCenter.y));
+    CGMutablePathRef rightCirPath = CGPathCreateMutable();
+    CGPathAddArc(rightCirPath, &t3, rightSmallCenter.x, rightSmallCenter.y,
+                 smallRadius, 0*M_PI, 2*M_PI, 0);
+    CGContextAddPath(ctx, rightCirPath);
+    CGContextSetFillColorWithColor(ctx, SUN_SMALL_CIRCLE_COLOR.CGColor);
     CGContextFillPath(ctx);
     
-    CGContextSetFillColorWithColor(ctx, [UIColor yellowColor].CGColor);
-    CGContextAddEllipseInRect(ctx, CGRectMake(center.x - 93, center.y - 3, 6, 6));
-    CGContextFillPath(ctx);
-    
-    CGContextSetFillColorWithColor(ctx, [UIColor yellowColor].CGColor);
-    CGContextAddEllipseInRect(ctx, CGRectMake(center.x + 87, center.y - 3, 6, 6));
-    CGContextFillPath(ctx);
-    */
     self.contents = (id)UIGraphicsGetImageFromCurrentImageContext().CGImage;
     UIGraphicsEndImageContext();
 }
