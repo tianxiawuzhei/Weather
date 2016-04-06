@@ -1057,12 +1057,12 @@
 					"\"${PODS_ROOT}/Headers/Public/RESideMenu\"/**",
 					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"/**",
 					"\"${PODS_ROOT}/Headers/Public/UIImage+BlurredFrame\"/**",
-					"\"${SRCROOT}\"/**",
 				);
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.zyq.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public\"/**";
 			};
 			name = Debug;
 		};
@@ -1081,12 +1081,12 @@
 					"\"${PODS_ROOT}/Headers/Public/RESideMenu\"/**",
 					"\"${PODS_ROOT}/Headers/Public/ReactiveCocoa\"/**",
 					"\"${PODS_ROOT}/Headers/Public/UIImage+BlurredFrame\"/**",
-					"\"${SRCROOT}\"/**",
 				);
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.zyq.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public\"/**";
 			};
 			name = Release;
 		};

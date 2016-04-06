@@ -20,6 +20,9 @@ PODS:
     - ReactiveCocoa/Core
   - RESideMenu (4.0.7)
   - UIImage+BlurredFrame (0.0.4)
+  - YYCategories (0.9.0):
+    - YYCategories/no-arc (= 0.9.0)
+  - YYCategories/no-arc (0.9.0)
 
 DEPENDENCIES:
   - CocoaLumberjack
@@ -30,6 +33,7 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 2.3.1)
   - RESideMenu (~> 4.0.7)
   - UIImage+BlurredFrame
+  - YYCategories
 
 EXTERNAL SOURCES:
   MJRefresh:
@@ -50,5 +54,6 @@ SPEC CHECKSUMS:
   ReactiveCocoa: 334468a83b2c5f669f7cfb9a084415ee23219b4f
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
+  YYCategories: ee8bf1a2b6f93e55d1089a4af46f4937a44c1d8e
 
 COCOAPODS: 0.39.0
