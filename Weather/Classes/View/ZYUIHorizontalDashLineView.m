@@ -15,7 +15,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setBackgroundColor:[UIColor clearColor]];
+        UIColor *colorPattern = [UIColor colorWithPatternImage:
+                                       [UIImage imageNamed:@"divider_white_horizontal"]];
+        [self setBackgroundColor:colorPattern];
     }
     return self;
 }
@@ -29,7 +31,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    
+    /*
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     //设置虚线颜色
     CGContextSetStrokeColorWithColor(currentContext, LINE_COLOR.CGColor);
@@ -44,6 +46,7 @@
     //下面最后一个参数“2”代表排列的个数。
     CGContextSetLineDash(currentContext, 0, arr, 2);
     CGContextDrawPath(currentContext, kCGPathStroke);
+     */
 }
 
 @end
